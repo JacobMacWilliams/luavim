@@ -5,3 +5,4 @@ vim.opt.softtabstop = 0
 vim.opt.expandtab = true
 
 require('keybindings.bindings')
+require('plugins')
