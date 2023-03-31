@@ -11,3 +11,5 @@ require('configs.treesitter')
 
 require('configs.telescope')
 require('keybindings.telescope')
+
+require('configs.lualine')
