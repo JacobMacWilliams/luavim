@@ -6,4 +6,8 @@ vim.opt.expandtab = true
 
 require('keybindings.bindings')
 require('plugins')
+
 require('configs.treesitter')
+
+require('configs.telescope')
+require('keybindings.telescope')
