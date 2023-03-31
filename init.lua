@@ -13,3 +13,6 @@ require('configs.telescope')
 require('keybindings.telescope')
 
 require('configs.lualine')
+
+require('configs.hop')
+require('keybindings.hop')
