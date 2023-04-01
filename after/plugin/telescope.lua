@@ -4,9 +4,6 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 --vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
--- Fix terrible purple default.
-vim.api.nvim_command("hi NormalFloat ctermfg=LightGrey")
-
 -- Standard setup see telescope.setup and builtin.opts for valid key-values
 require('telescope').setup{
   defaults = {
