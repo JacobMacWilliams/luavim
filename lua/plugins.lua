@@ -2,10 +2,9 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 
-        -- Packer can manage itself
+        -- Packer: plugin manager
         use 'wbthomason/packer.nvim'
-
-        -- Semantic tree creation of buffer contents and syntax
+        -- TreeSitter: Semantic tree creation of buffer contents and syntax
         -- highlightin   
         use {
           'nvim-treesitter/nvim-treesitter',
@@ -14,25 +13,56 @@ return require('packer').startup(function(use)
                ts_update()
              end,
         }
+        --LSP-ZERO: Out of the box configuration of lsp with cmp and other
+        -- components.
+        use {
+          'VonHeikemen/lsp-zero.nvim',
+          branch = 'v2.x',
+          requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+              'williamboman/mason.nvim',
+              run = function()
+                pcall(vim.cmd, 'MasonUpdate')
+              end,
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
+       }
+       --Vim-Fugitive: Git integration.
+       use 'tpope/vim-fugitive'
+       --Harpoon: Quick buffer navigation.
+       use 'ThePrimeagen/harpoon'
         -- Telescope: Fuzzy finder for various lists 
        use {
          'nvim-telescope/telescope.nvim', tag = '0.1.1',
          requires = { {'nvim-lua/plenary.nvim'} }
        }
-       use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } 
-       
+       use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
        -- Lualine: Status line tool (curren line, mode, file, etc.)
        use {
           'nvim-lualine/lualine.nvim',
            requires = { 'nvim-tree/nvim-web-devicons', opt = true }
        }
-       
+       -- GitSigns: Annotations for git and a few actions.
+       use {
+         'lewis6991/gitsigns.nvim',
+         tag = 'release', -- To use the latest release
+         config = function()
+                 require('gitsigns').setup()
+         end
+       }
        -- Hop: Intra-File navigation tool.
        use {
           'phaazon/hop.nvim',
           branch = 'v2', -- optional but strongly recommended
         }
-
+       -- Tokyonight: NeoVim Theme.
        use 'folke/tokyonight.nvim'
 end)
