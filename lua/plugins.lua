@@ -35,12 +35,14 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
        }
+       --Vim-Fugitive: Git integration.
+       use 'tpope/vim-fugitive'
         -- Telescope: Fuzzy finder for various lists 
        use {
          'nvim-telescope/telescope.nvim', tag = '0.1.1',
          requires = { {'nvim-lua/plenary.nvim'} }
        }
-       use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } 
+       use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
        -- Lualine: Status line tool (curren line, mode, file, etc.)
        use {
           'nvim-lualine/lualine.nvim',
