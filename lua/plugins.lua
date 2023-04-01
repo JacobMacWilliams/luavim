@@ -37,6 +37,8 @@ return require('packer').startup(function(use)
        }
        --Vim-Fugitive: Git integration.
        use 'tpope/vim-fugitive'
+       --Harpoon: Quick buffer navigation.
+       use 'ThePrimeagen/harpoon'
         -- Telescope: Fuzzy finder for various lists 
        use {
          'nvim-telescope/telescope.nvim', tag = '0.1.1',
