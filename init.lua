@@ -12,6 +12,7 @@ vim.opt.softtabstop = 0
 vim.opt.textwidth = 80
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.breakat = " "
 
 vim.opt.timeoutlen = 200
 
