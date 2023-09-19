@@ -20,9 +20,10 @@ require('telescope').setup{
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:
-    -- builtin.find_files = {
-    --     preview = true,
-    -- }
+    find_files = {
+        preview = true,
+        no_ignore = true
+    }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
   },
