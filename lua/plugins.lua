@@ -65,4 +65,7 @@ return require('packer').startup(function(use)
         }
        -- Tokyonight: NeoVim Theme.
        use 'folke/tokyonight.nvim'
+
+       -- Gruvbox: NeoVim Theme
+       use { "ellisonleao/gruvbox.nvim" }
 end)
