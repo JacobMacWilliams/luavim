@@ -17,14 +17,10 @@ require('mason-lspconfig').setup({
     ['julials'] = function()
       
       local lspconfig = require("lspconfig")
-      
-      lspconfig.julials.setup{
-        --OLD SETUP
-        symbol_cache_download = false,
-        julia_env_path = vim.fn.getcwd()
-        
+      lspconfig.julials.setup {
+        --julia_env_path = {"~/.julia/environments/nvim-lspconfig"}
+        --symbol_cache_download = false,
       }
-
     end,
   }
 })
