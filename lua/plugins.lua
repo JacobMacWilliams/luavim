@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
         -- components.
         use {
           'VonHeikemen/lsp-zero.nvim',
-          branch = 'v2.x',
+          branch = 'v3.x',
           requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required
