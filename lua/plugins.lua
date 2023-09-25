@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
        -- GitSigns: Annotations for git and a few actions.
        use {
          'lewis6991/gitsigns.nvim',
-         tag = 'release', -- To use the latest release
+         --tag = '0.6', -- To use the latest release
          config = function()
                  require('gitsigns').setup()
          end
