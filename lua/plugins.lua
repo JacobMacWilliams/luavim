@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
        use 'ThePrimeagen/harpoon'
         -- Telescope: Fuzzy finder for various lists 
        use {
-         'nvim-telescope/telescope.nvim', tag = '0.1.1',
+         'nvim-telescope/telescope.nvim', tag = '0.1.4',
          requires = { {'nvim-lua/plenary.nvim'} }
        }
        use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
