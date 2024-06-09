@@ -1,0 +1,81 @@
+return {
+    -- Tokyonight: NeoVim Theme.
+    {
+		'folke/tokyonight.nvim',
+		lazy = false,
+		priority = 1000
+	},
+    
+	-- Gruvbox: NeoVim Theme
+    { "ellisonleao/gruvbox.nvim" },
+
+	{
+    	'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
+	},
+	
+	-- GitSigns: Annotations for git and a few actions.
+    {
+         'lewis6991/gitsigns.nvim',
+		 config = function()
+			 require('gitsigns').setup()
+		 end,
+         --tag = '0.6', -- To use the latest release
+    },
+	
+	-- Lualine: Status line
+	{
+          'nvim-lualine/lualine.nvim',
+           dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+    },
+
+    --Vim-Fugitive: Git integration.
+    {'tpope/vim-fugitive'},
+    
+	--Harpoon: Quick buffer navigation.
+    {'ThePrimeagen/harpoon'},
+
+	--In line navigation
+    {
+    	'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+    },
+
+	{
+         'nvim-telescope/telescope.nvim',
+		 lazy = false,
+		 tag = '0.1.6',
+         dependencies = { {'nvim-lua/plenary.nvim'} }
+    },
+	
+	{
+		'nvim-telescope/telescope-fzf-native.nvim', 
+	 	build = 'make'
+	},
+	
+	-- Latex integration
+	{'lervag/vimtex'},
+
+--LSP-ZERO: Out of the box configuration of lsp with cmp and other components.	
+	{
+    	'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        dependencies = {
+          -- LSP Support
+          {'neovim/nvim-lspconfig'},             -- Required
+          {                                      -- Optional
+            'williamboman/mason.nvim',
+            build = function()
+              pcall(vim.cmd, 'MasonUpdate')
+            end,
+          },
+          {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+          -- Autocompletion
+          {'hrsh7th/nvim-cmp'},     -- Required
+          {'hrsh7th/cmp-nvim-lsp'}, -- Required
+          {'L3MON4D3/LuaSnip'},     -- Required
+        }
+	},
+}
+
