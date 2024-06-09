@@ -63,6 +63,10 @@ return require('packer').startup(function(use)
           'phaazon/hop.nvim',
           branch = 'v2', -- optional but strongly recommended
         }
+	   
+		-- Latex integration
+		use 'lervag/vimtex'
+
        -- Tokyonight: NeoVim Theme.
        use 'folke/tokyonight.nvim'
 
