@@ -11,7 +11,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here 
   -- with the ones you want to install
-  ensure_installed = {'julials'},
+  ensure_installed = {'julials', 'pyright'},
   handlers = {
     lsp_zero.default_setup,
     ['julials'] = function()
