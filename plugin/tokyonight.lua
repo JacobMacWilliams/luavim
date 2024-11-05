@@ -1,5 +1,4 @@
 -- TOKYONIGHT CONFIG
-vim.cmd[[colorscheme tokyonight]]
 -- Fix terrible purple default.
 -- vim.api.nvim_command("hi NormalFloat ctermfg=LightGrey")
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
@@ -39,3 +38,4 @@ require("tokyonight").setup({
   ---@param colors ColorScheme
   --on_highlights = function(highlights, colors) end,
 })
+vim.cmd[[colorscheme tokyonight]]
