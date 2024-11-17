@@ -33,7 +33,11 @@ return {
     {'tpope/vim-fugitive'},
     
 	--Harpoon: Quick buffer navigation.
-    {'ThePrimeagen/harpoon'},
+    {
+		'ThePrimeagen/harpoon',
+		branch = 'harpoon2',
+		dependencies = {{"nvim-lua/plenary.nvim"}}
+	},
 
 	--In line navigation
     {
@@ -44,7 +48,7 @@ return {
 	{
          'nvim-telescope/telescope.nvim',
 		 lazy = false,
-		 tag = '0.1.6',
+		 tag = '0.1.8',
          dependencies = { {'nvim-lua/plenary.nvim'} }
     },
 	
