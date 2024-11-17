@@ -56,26 +56,18 @@ return {
 	-- Latex integration
 	{'lervag/vimtex'},
 
---LSP-ZERO: Out of the box configuration of lsp with cmp and other components.	
+--LSP-Config
+	{'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
+	{'neovim/nvim-lspconfig'},
+    {'hrsh7th/nvim-cmp'},     -- Required
+    {'hrsh7th/cmp-nvim-lsp'}, -- Required
+    {'L3MON4D3/LuaSnip'},     -- Required
 	{
-    	'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        dependencies = {
-          -- LSP Support
-          {'neovim/nvim-lspconfig'},             -- Required
-          {                                      -- Optional
-            'williamboman/mason.nvim',
-            build = function()
-              pcall(vim.cmd, 'MasonUpdate')
-            end,
-          },
-          {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-          -- Autocompletion
-          {'hrsh7th/nvim-cmp'},     -- Required
-          {'hrsh7th/cmp-nvim-lsp'}, -- Required
-          {'L3MON4D3/LuaSnip'},     -- Required
-        }
+		'williamboman/mason.nvim',
+		build = function()
+			pcall(vim.cmd, 'MasonUpdate')
+		end,
 	},
+	{'williamboman/mason-lspconfig.nvim'},
 }
 
