@@ -61,7 +61,6 @@ return {
 	{'lervag/vimtex'},
 
 --LSP-Config
-	{'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
 	{'neovim/nvim-lspconfig'},
     {'hrsh7th/nvim-cmp'},     -- Required
     {'hrsh7th/cmp-nvim-lsp'}, -- Required
