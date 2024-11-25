@@ -28,7 +28,14 @@ return {
           'nvim-lualine/lualine.nvim',
            dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
     },
-
+	-- For commenting functionality
+	-- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+	{
+	    'numToStr/Comment.nvim',
+	    opts = {
+	        -- add any options here
+	    }
+	},
     --Vim-Fugitive: Git integration.
     {'tpope/vim-fugitive'},
     
