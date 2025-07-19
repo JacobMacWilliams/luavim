@@ -17,7 +17,7 @@ M.on_attach = function(_, bufnr)
 	nmap("gD", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", "Go to definition in vertical split")
 	nmap("K", vim.lsp.buf.hover, "Hover Documentation")
 	nmap("<leader>ic", vim.lsp.buf.incoming_calls, "Incoming calls")
-	nmap("<leader>oc", vim.lsp.buf.incoming_calls, "Outgoing calls")
+	nmap("<leader>oc", vim.lsp.buf.outgoing_calls, "Outgoing calls")
 	nmap("<leader>rn", vim.lsp.buf.rename, "Rename Symbol")
 end
 
