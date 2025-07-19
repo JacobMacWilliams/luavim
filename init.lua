@@ -29,5 +29,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+-- Diagnostics
+vim.diagnostic.config({
+	virtual_lines = true
+})
 
 require("lazy").setup(require("lazyplugins"))
