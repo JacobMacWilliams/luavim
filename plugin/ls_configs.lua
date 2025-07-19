@@ -31,19 +31,23 @@ masonlspconfig.setup({
 --    end,
 --  }
 })
-lspconfig.pyright.setup({
-	capabilities = default_client.capabilities,
-	on_attach = default_client.on_attach
-})
-lspconfig.lua_ls.setup({
-	capabilities = default_client.capabilities,
-	on_attach = default_client.onattach,
-	settings = {
-		Lua = {
-			runtime = "LuaJIT",
-			diagnostics = {
-				globals = {"vim"},
-			},
-		}
-	},
-})
+
+-- I THINK THIS IS UNNECESSARY IN NEOVIM 0.11
+-- MASON SEEMS TO BE HANDLING ATTACH LOGIC
+--
+--lspconfig.pyright.setup({
+--	capabilities = default_client.capabilities,
+--	on_attach = default_client.on_attach
+--})
+--lspconfig.lua_ls.setup({
+--	capabilities = default_client.capabilities,
+--	on_attach = default_client.onattach,
+--	settings = {
+--		Lua = {
+--			runtime = "LuaJIT",
+--			diagnostics = {
+--				globals = {"vim"},
+--			},
+--		}
+--	},
+--})
