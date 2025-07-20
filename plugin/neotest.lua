@@ -35,14 +35,16 @@ neotest.setup({
 
 --test run
 vim.keymap.set("n", "<leader>tr", function() neotest.run.run() end)
+--test stop
+vim.keymap.set("n", "<leader>ts", function() neotest.run.stop() end)
 --test last
 vim.keymap.set("n", "<leader>tl", function() neotest.run.run_last() end)
 --test file
 vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end)
 --test all
 vim.keymap.set("n", "<leader>ta", function() neotest.run.run({suite=true}) end)
---test summary
-vim.keymap.set("n", "<leader>ts", function() neotest.summary.toggle() end)
+--test buffer
+vim.keymap.set("n", "<leader>tb", function() neotest.summary.toggle() end)
 --test output
 vim.keymap.set("n", "<leader>to", function() neotest.output.open({enter=true}) end)
 --test watch
