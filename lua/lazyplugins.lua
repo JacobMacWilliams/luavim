@@ -67,7 +67,7 @@ return {
 	-- Latex integration
 	{'lervag/vimtex'},
 
---LSP-Config
+	--LSP-Config
 	{'neovim/nvim-lspconfig'},
     {'hrsh7th/nvim-cmp'},     -- Required
     {'hrsh7th/cmp-nvim-lsp'}, -- Required
@@ -79,5 +79,17 @@ return {
 		end,
 	},
 	{'williamboman/mason-lspconfig.nvim'},
+
+	--Testing-Plugin
+	{
+	  "nvim-neotest/neotest",
+	  dependencies = {
+	    "nvim-neotest/nvim-nio",
+		"nvim-neotest/neotest-python",
+	    "nvim-lua/plenary.nvim",
+	    "antoinemadec/FixCursorHold.nvim",
+	    "nvim-treesitter/nvim-treesitter",
+	  }
+	}
 }
 
