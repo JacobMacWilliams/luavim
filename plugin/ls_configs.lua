@@ -19,26 +19,14 @@ cmp.setup({
 mason.setup()
 masonlspconfig.setup({
   ensure_installed = {'lua_ls', 'pyright'},
---  handlers = {
---    lsp_zero.default_setup,
---    ['julials'] = function()
---      
---      local lspconfig = require("lspconfig")
---      lspconfig.julials.setup {
---        --julia_env_path = {"~/.julia/environments/nvim-lspconfig"}
---        symbol_cache_download = true
---      }
---    end,
---  }
 })
 
--- I THINK THIS IS UNNECESSARY IN NEOVIM 0.11
--- MASON SEEMS TO BE HANDLING ATTACH LOGIC
---
---lspconfig.pyright.setup({
---	capabilities = default_client.capabilities,
---	on_attach = default_client.on_attach
---})
+lspconfig.pyright.setup({
+	capabilities = default_client.capabilities,
+	on_attach = default_client.on_attach
+})
+
+-- This is handled by lazydev plugin
 --lspconfig.lua_ls.setup({
 --	capabilities = default_client.capabilities,
 --	on_attach = default_client.onattach,
