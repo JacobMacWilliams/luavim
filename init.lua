@@ -14,7 +14,7 @@ vim.opt.softtabstop = 0
 --vim.opt.linebreak = true
 vim.opt.breakat = " "
 
-vim.opt.timeoutlen = 200
+vim.opt.timeoutlen = 300
 
 -- lazy.nvim/plugin setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
