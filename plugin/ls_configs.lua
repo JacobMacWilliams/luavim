@@ -19,6 +19,7 @@ cmp.setup({
 mason.setup()
 masonlspconfig.setup({
   ensure_installed = {'lua_ls', 'pyright'},
+  automatic_enable = false
 })
 
 lspconfig.pyright.setup({
