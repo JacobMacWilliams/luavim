@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+-- local lspconfig = vim.lsp.config() # Deprecated as of v0.11
 local cmp = require('cmp')
 local default_client = require('lsclient-default')
 local mason = require('mason')
@@ -22,7 +22,7 @@ masonlspconfig.setup({
   automatic_enable = false
 })
 
-lspconfig.pyright.setup({
+vim.lsp.config("pyright", {
 	capabilities = default_client.capabilities,
 	on_attach = default_client.on_attach
 })

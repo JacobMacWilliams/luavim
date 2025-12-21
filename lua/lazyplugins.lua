@@ -11,6 +11,7 @@ return {
 
 	{
     	'nvim-treesitter/nvim-treesitter',
+		lazy = false,
         build = ":TSUpdate",
 	},
 	
@@ -48,14 +49,18 @@ return {
 
 	--In line navigation
     {
-    	'phaazon/hop.nvim',
-        branch = 'v2', -- optional but strongly recommended
+    	'smoka7/hop.nvim',
+		version = "*",
+		opts = {
+			keys = 'etovxqpdygfblzhckisuran'
+		}
     },
+	
 
 	{
          'nvim-telescope/telescope.nvim',
 		 lazy = false,
-		 tag = '0.1.8',
+		 tag = 'v0.2.0',
          dependencies = { {'nvim-lua/plenary.nvim'} }
     },
 	
